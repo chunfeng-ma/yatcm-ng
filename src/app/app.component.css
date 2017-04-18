@@ -1,0 +1,33 @@
+
+nav {
+  z-index: 2;
+}
+
+.navbar-inverse {
+  background-color: #1976D2;
+}
+
+.navbar-inverse a {
+  color: #FFFFFF;
+}
+
+.navbar .nav li a:hover {
+  background-color: rgba(9, 102, 189, 0.76);
+}
+
+.Whole_body {
+  margin-top: 80px;
+}
+
+footer {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.toTop {
+  text-align: center;
+  top: 10%;
+  right: 5%;
+  position: fixed;
+  z-index: 1;
+}

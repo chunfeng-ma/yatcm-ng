@@ -1,0 +1,74 @@
+<h1>Detail Information</h1>
+<div class="panel panel-default" *ngIf="compound">
+  <div class="panel-heading">
+    <h3><b>{{compound.englishName}}'s basic information</b></h3>
+  </div>
+
+  <table class="table table-bordered table-striped">
+    <tr>
+      <td><b>English Name: </b>{{compound.englishName}}</td>
+    </tr>
+    <tr>
+      <td><b>Chinese Name: </b>{{compound.chineseName}}</td>
+    </tr>
+  </table>
+</div>
+
+<div class="container" *ngIf="compound">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{{compound.molImage}}" alt="compound image">
+    </div>
+    <div class="col-md-6">
+      <table class="table table-striped">
+        <tr>
+          <td><p><b>Smiles: </b></p></td>
+        </tr>
+        <tr>
+          <td>{{compound.smiles}}</td>
+        </tr>
+        <tr>
+          <td><p><b>Formula: </b></p></td>
+        </tr>
+        <tr>
+          <td>{{compound.formula}}</td>
+        </tr>
+        <tr>
+          <td><p><b>Mol weight: </b></p></td>
+        </tr>
+        <tr>
+          <td>{{compound.molWeight}}</td>
+        </tr>
+        <tr>
+          <td><p><b>Calculate attributes: </b></p></td>
+        </tr>
+        <tr>
+          <td><b>Alogp: </b>{{compound.alogp}}; <b>PSA: </b>{{compound.psa}}; <b>HBA: </b>{{compound.hba}}; <b>HBD: </b>{{compound.hbd}};
+            <b>RTB:</b>{{compound.rtb}}
+          </td>
+        </tr>
+        <tr>
+          <td><p><b>Mol2 file: </b></p></td>
+        </tr>
+        <tr>
+          <td>{{compound.molFile}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<table class="table table-striped" *ngIf="compound">
+  <tr>
+    <td><p><b>Related Herbs: </b></p></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td><p><b>Similar compounds in ChEMBL: </b></p></td>
+  </tr>
+  <tr>
+    <td><a>{{compound.relatedCompounds.edges.length}} records</a></td>
+  </tr>
+
+</table>

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+
+      <div class="bt-div">
+        <button class="bt-content" [routerLink]="['/browse/herbs']"><b>herbs</b></button>
+        <button class="bt-content" [routerLink]="['/browse/prescriptions']"><b>prescriptions</b></button>
+        <button class="bt-content" [routerLink]="['/browse/keggpathways']"><b>keggpathways</b></button>
+      </div>
+    </div>
+
+
+    <div class="col-md-10">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</div>
+
+<!--<nav>-->
+<!--<a routerLink="./herbs" routerLinkActive="active">herbs</a>-->
+<!--<a routerLink="./prescriptions" routerLinkActive="active">prescriptions</a>-->
+<!--<a routerLink="./keggpathways" routerLinkActive="active">keggpathways</a>-->
+<!--</nav>-->

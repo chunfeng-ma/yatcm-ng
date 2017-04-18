@@ -1,0 +1,38 @@
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  margin-bottom: 30px;
+}
+
+.carousel {
+  width: 85%;
+  position: relative;
+  margin-left: 7.5%;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .row {
+  padding-top: 80px;
+}
+
+.container .row .col-md-4 {
+  text-align: center;
+}
+
+.container .row .col-md-4 a img {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container .row .col-md-4 a img:hover {
+  left: 1%;
+}
+
+

@@ -1,0 +1,42 @@
+<div *ngIf="loading" style="text-align: center;">
+  <img src="assets/images/poi.svg" alt="">
+</div>
+
+<div *ngIf="!loading">
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>#</th>
+        <th>Phonetic name</th>
+        <th>Chinese name</th>
+        <th>Components</th>
+        <th>Detail</th>
+      </tr>
+
+      <tr *ngFor="let edge of edges;let i=index">
+        <td>{{i+1}}</td>
+        <td>{{edge.node.phoneticName}}</td>
+        <td>{{edge.node.chineseName}}</td>
+        <td>{{edge.node.herbs.edges.length}}</td>
+        <td><a (click)="gotoDetail(edge.node.id)">view</a></td>
+      </tr>
+
+    </table>
+  </div>
+
+  <footer>
+    <pagination [totalItems]="bigTotalItems"
+                [(ngModel)]="bigCurrentPage"
+                [maxSize]="maxSize"
+                (pageChanged)="pageChanged($event)"
+                [itemsPerPage]="bigItemsPerPage"
+                (numPages)="numAllPages=$event"
+                class="pagination-sm">
+    </pagination>
+  </footer>
+
+</div>
+
+
+
+

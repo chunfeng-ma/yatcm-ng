@@ -1,0 +1,10 @@
+<h2>
+  Ingredients Information
+</h2>
+<ol>
+  <li *ngFor="let compound of compounds">
+    <p>EnglishName: {{compound.englishName}}</p>
+    <p>Formula: <a (click)="gotoCompoundDetail(compound.id)">{{compound.formula}}</a></p>
+    <a (click)="gotoCompoundDetail(compound.id)"><img src="{{compound.molImage}}" alt="No Image"></a>
+  </li>
+</ol>

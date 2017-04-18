@@ -1,0 +1,37 @@
+<div *ngIf="loading" style="text-align: center;">
+  <img src="assets/images/poi.svg" alt="">
+</div>
+
+<div *ngIf="!loading">
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>View in KEGG</th>
+        <th>Detail</th>
+      </tr>
+
+      <tr *ngFor="let edge of edges; let i=index">
+        <td>{{i+1}}</td>
+        <td><p>{{edge.node.name}}</p></td>
+        <td><a href="http://www.kegg.jp/kegg-bin/show_pathway?{{edge.node.keggId}}">{{edge.node.keggId}}</a></td>
+        <td><a href="#">view</a></td>
+      </tr>
+    </table>
+  </div>
+  <footer>
+    <pagination [(totalItems)]="bigTotalItems"
+                [(ngModel)]="bigCurrentPage"
+                [maxSize]="maxSize"
+                (pageChanged)="pageChanged($event)"
+                [itemsPerPage]="bigItemsPerPage"
+                (numPages)="numAllPages=$event"
+                class="pagination-sm">
+    </pagination>
+  </footer>
+
+</div>
+
+
+

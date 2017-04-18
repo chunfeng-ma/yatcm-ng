@@ -1,0 +1,14 @@
+<!--come from JSME_smile_atom_highlight.html-->
+<H1>SMILES Highlight demo</H1>
+<p>
+  Draw a structure, click on the star icon of the editor and click on one or more atoms
+</p>
+<div id="jsme_container"></div>
+<form>
+  <input type="checkbox" id="canonic_check" onclick='show_smiles();'>Canonical SMILES
+</form>
+<BR>
+<div>SMILES: <textarea id="smiles_container" #sqy></textarea></div>
+
+<button class="btn btn-default" (click)="search(sqy.value)">Click to search!</button>
+{{tt}}

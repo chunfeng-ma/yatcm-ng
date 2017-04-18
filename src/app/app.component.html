@@ -1,0 +1,45 @@
+<!--导航条-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsing" data-toggle="collapse" data-target="#collapse_navbar">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a [routerLink]="['/dashboard']" routerLinkActive="active" class="navbar-brand">Logo</a>-->
+    </div>
+
+    <div class="collapse navbar-collapse" id="collapse_navbar">
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/dashboard']" routerLinkActive="active">
+          <span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li tourAnchor="1"><a [routerLink]="['/search']">
+          <span class="glyphicon glyphicon-search"></span> Search</a></li>
+        <li tourAnchor="2"><a [routerLink]="['/browse']">
+          <span class="glyphicon glyphicon-list"></span> Browse</a></li>
+        <li tourAnchor="3"><a [routerLink]="['/help']">
+          <span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+        <li><a [routerLink]="['/contact']">
+          <span class="glyphicon glyphicon-pencil"></span> Contact</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<!--body部分-->
+<div class="container Whole_body">
+  <div class="row">
+    <router-outlet></router-outlet>
+    <hr/>
+    <footer>
+      <p>copyright &copy; NanKai</p>
+    </footer>
+  </div>
+</div>
+<div class="toTop">
+  <a href="#top"><span class="glyphicon glyphicon-chevron-up btn-lg"></span></a>
+  <p>To top</p>
+</div>
+<!--<tour-step-template></tour-step-template>-->

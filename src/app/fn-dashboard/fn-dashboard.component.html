@@ -1,0 +1,44 @@
+<div class="title">
+  <h1><b>Yet Another Traditional Chinese Medicine Database</b></h1>
+</div>
+
+
+<div class="carousel">
+  <carousel>
+    <slide><img src="assets/images/dashboard/tcm1.jpg" alt="first" class="img-responsive"></slide>
+    <slide><img src="assets/images/dashboard/tcm2.jpg" alt="second" class="img-responsive"></slide>
+    <slide><img src="assets/images/dashboard/tcm3.jpg" alt="three" class="img-responsive"></slide>
+  </carousel>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <a [routerLink]="['/browse/prescriptions']"><img src="assets/images/dashboard/prescription.jpg" alt=""
+                                                       class="img-responsive img-circle"></a>
+      <h2><b>Prescriptions</b></h2>
+      <p>YaTCM collected 393 prescription through text mining of the books (Fangji Xue), which include Chinese name,
+        English name, composition and dosage, traditional and modern usage.</p>
+    </div>
+    <div class="col-md-4">
+      <a [routerLink]="['/browse/herbs']"><img src="assets/images/dashboard/herb.jpg" alt=""
+                                               class="img-responsive img-circle"></a>
+      <h2><b>Herbs</b></h2>
+      <p>YaTCM collected 7629 herbs including Chinese name, English name, Taxonomy classified information, Chinese
+        wiki’s link, English wiki’s link and picture. Each item lists the all the related prescriptions and ingredients
+        in database.</p>
+    </div>
+    <div class="col-md-4">
+      <a [routerLink]="['/browse/keggpathways']"><img src="assets/images/dashboard/compound.jpg" alt=""
+                                                      class="img-responsive img-circle"></a>
+      <h2><b>Compounds</b></h2>
+      <p>YaTCM collected 34680 herbal ingredients including Chinese name, English name, synonyms, structure and related
+        attributes, related herbs, related compound in database itself, similar compounds in ChEMBL, potential protein
+        targets, related KEGG metabolism pathway mappings.</p>
+    </div>
+  </div>
+</div>
+
+
+

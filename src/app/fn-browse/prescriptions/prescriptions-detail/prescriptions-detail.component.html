@@ -1,0 +1,72 @@
+<h1>Detail Information</h1>
+<div class="container" *ngIf="prescription">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 style="text-align: center;"><b>{{prescription.chineseName}}</b></h2>
+        </div>
+
+        <table class="table table-bordered table-striped">
+          <tr>
+            <td><b>中文名: </b>{{prescription.chineseName}}</td>
+          </tr>
+          <tr>
+            <td><b>英文名: </b>{{prescription.englishName}}</td>
+          </tr>
+          <tr>
+            <td><b>配方组成: </b>{{prescription.zucheng}}</td>
+          </tr>
+          <tr>
+            <td><b>方解: </b>{{prescription.fangjie}}</td>
+          </tr>
+          <tr>
+            <td><b>使用方法: </b>{{prescription.yongfa}}</td>
+          </tr>
+          <tr>
+            <td><b>传统用法: </b>{{prescription.traditionUsage}}</td>
+          </tr>
+          <tr>
+            <td><b>现代用法: </b>{{prescription.modernUsage}}</td>
+          </tr>
+          <tr>
+            <td><b>Modern Usage: </b>{{prescription.modernUsageEn}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          主方
+        </div>
+
+        <table class="table table-bordered table-striped" *ngIf="prescription.mainPrescription">
+          <tr>
+            <td><a
+              (click)="gotoPresc(prescription.mainPrescription.id)">{{prescription.mainPrescription.chineseName}}</a>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          中药成分
+        </div>
+
+        <table class="table table-bordered table-striped">
+
+          <tr *ngFor="let edge of prescription.herbs.edges">
+            <td><a (click)="gotoHerb(edge.node.id)">{{edge.node.chineseName}}</a></td>
+          </tr>
+
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
